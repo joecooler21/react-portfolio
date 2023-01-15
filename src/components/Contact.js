@@ -64,7 +64,7 @@ const Contact = ({ showContact, setShowContact }) => {
             body: JSON.stringify(contactMsg)
         }
 
-        const response = await fetch('http://localhost:3001/contact', options)
+        const response = await fetch('https://delightful-neckerchief-foal.cyclic.app/contact', options)
         const data = await response.json()
         console.log(data)
     }
