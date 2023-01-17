@@ -8,7 +8,15 @@ const legendStyles = {
     fontWeight: 'normal'
 }
 
-const Project = ({ name, info, image, features }) => {
+const Project = ({ name, info, image, features, gitLink, demoLink }) => {
+
+    const clickGitHub = () => {
+        window.open(gitLink)
+    }
+
+    const clickDemo = () => {
+        window.open(demoLink)
+    }
     return (
         <div style={{marginTop:'1em'}}>
             <fieldset style={{textAlign:'center', width:'15em', height:'19em'}}>
@@ -17,16 +25,16 @@ const Project = ({ name, info, image, features }) => {
                 </legend>
                 {image}
                 <p style={{fontWeight: 'normal', maxWidth:'fit-content'}}>{info}</p>
-                <ul className='feature-list'>
+                <ul style={{marginLeft:'4em'}} className='feature-list'>
                     {features.map(e => {
-                        return <li><FaChevronRight/>{e}</li>
+                        return <li style={{textAlign:'left'}}>{e}</li>
                     })}
                 </ul>
                 <hr style={{width: '50%', borderColor:'#00C6BD'}} />
 
                 <ul style={{position:'relative', display:'flex', left:'1.8em', maxWidth:'fit-content'}} className='nav-list'>
-                    <li className='hover-underline-animation'>GitHub</li>
-                    <li className='hover-underline-animation'>Demo</li>
+                    <li onClick={clickGitHub} className='hover-underline-animation'>GitHub</li>
+                    <li onClick={clickDemo} className='hover-underline-animation'>Demo</li>
                 </ul>
             </fieldset>
 

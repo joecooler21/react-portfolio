@@ -1,5 +1,5 @@
 import Project from './Project'
-import { FaCalendarAlt, FaBeer, FaChessKnight } from 'react-icons/fa'
+import { FaCalendarAlt } from 'react-icons/fa'
 
 const fsStyles = {
     border: '0 none',
@@ -35,22 +35,12 @@ const Projects = () => {
 
         <fieldset style={fsStyles}>
             <legend style={legendStyles}>Projects</legend>
-            <Project name='Scheduler'
+            <Project name='React Scheduler'
              info='An user-friendly application for viewing and managing your workplace schedule.'
              image={<FaCalendarAlt style={faStyles} />}
-             features={['Feature 1', 'Feature 2', 'Feature 3']}
-             />
-
-             <Project name='Project II'
-             info='An application using React.js & Material UI for the front-end. Node.js, MongoDB and Express for the backend.'
-             image={<FaBeer style={faStyles} />}
-             features={['Feature 1', 'Feature 2', 'Feature 3']}
-             />
-
-             <Project name='Project III'
-             info='An application using React.js & Material UI for the front-end. Node.js, MongoDB and Express for the backend.'
-             image={<FaChessKnight style={faStyles} />}
-             features={['Feature 1', 'Feature 2', 'Feature 3']}
+             features={['MongoDB', 'Express', 'React', 'Node']}
+             gitLink={'http://github.com/joecooler21/react-scheduler-app'}
+             demoLink={'http://joecooler21.github.io/react-scheduler-app/'}
              />
         </fieldset>
       
