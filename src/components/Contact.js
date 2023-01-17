@@ -50,7 +50,7 @@ const Contact = ({ showContact, setShowContact }) => {
     }
 
     const clickSubmit = async () => {
-        if (name.trim() === '' || email.trim() === '' || message.trim() ==='') {
+        if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
             alert('Please fill in all required fields')
             return
         }
@@ -61,13 +61,15 @@ const Contact = ({ showContact, setShowContact }) => {
         const options = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            mode: 'no-cors',
             body: JSON.stringify(contactMsg)
         }
 
-        const response = await fetch('https://delightful-neckerchief-foal.cyclic.app/contact', options)
-        const data = await response.json()
-        console.log(data)
+        try {
+            const response = await fetch('https://delightful-neckerchief-foal.cyclic.app/contact', options)
+            const data = await response.json()
+        } catch (error) {
+            console.log(error)
+        }
     }
 
 
