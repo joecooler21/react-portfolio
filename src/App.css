@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
   background-color: #0B1323;
   color: silver;
   caret-color: transparent;
+}
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .nav-list li {
@@ -36,7 +45,7 @@
 .hover-underline-animation:after {
   content: '';
   position: absolute;
-  width: 100%;
+  width: var(--width);
   transform: scaleX(0);
   height: 2px;
   bottom: 0;
@@ -50,4 +59,67 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.partial-border {
+  position: relative;
+  top:-5%;
+  background: none;
+  border: none;
+  text-align: left;
+  
+}
+
+.partial-border::before,
+.partial-border::after {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  content: "";
+  border-top-left-radius:7px;
+  
+}
+
+.partial-border::before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid #00C6BD;
+  border-top: 3px solid #00C6BD;
+  
+ }
+
+ 
+
+ .project-list-item {
+  margin-bottom:1em;
+  padding: .1em;
+  text-align: left;
+  transition: .2s all;
+ }
+
+ .project-list-item:hover {
+  letter-spacing:.02rem;
+  color:#00C6BD;
+  cursor: pointer;
+  transition: all .2s;
+ }
+
+ .project-card {
+  margin-left:5em;
+  margin-top:10%;
+  padding-left:1em;
+ }
+
+ .project-button {
+  outline:none;
+  border:none;
+  font-size:1em;
+  margin-right:.5em;
+  margin-top:2em;
+  margin-left:2em;
+ }
+
+ .left-border {
+  border-left:2px solid #00C6BD;
+  padding-left:1em;
+ }
 

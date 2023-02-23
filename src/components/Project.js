@@ -1,44 +1,33 @@
-import {FaChevronRight} from 'react-icons/fa'
+
 import '../App.css'
 
-const legendStyles = {
-    textAlign: 'center',
-    fontSize: '1.5em',
-    color: '#00C6BD',
-    fontWeight: 'normal'
+const containerStyles = {
+    position:'absolute',
+    right:'30%',
+    display:'flex',
+    flexDirection:'column',
+    marginTop:'10%',
+    marginLeft:'2em',
+    width: '10%',
 }
 
-const Project = ({ name, info, image, features, gitLink, demoLink }) => {
 
-    const clickGitHub = () => {
-        window.open(gitLink)
-    }
 
-    const clickDemo = () => {
-        window.open(demoLink)
-    }
+const Project = () => {
+
+
+    
     return (
-        <div style={{marginTop:'1em'}}>
-            <fieldset style={{textAlign:'center', width:'15em', height:'19em'}}>
-                <legend style={legendStyles}>
-                    {name}
-                </legend>
-                {image}
-                <p style={{fontWeight: 'normal', maxWidth:'fit-content'}}>{info}</p>
-                <ul style={{marginLeft:'4em'}} className='feature-list'>
-                    {features.map(e => {
-                        return <li style={{textAlign:'left'}}>{e}</li>
-                    })}
-                </ul>
-                <hr style={{width: '50%', borderColor:'#00C6BD'}} />
-
-                <ul style={{position:'relative', display:'flex', left:'1.8em', maxWidth:'fit-content'}} className='nav-list'>
-                    <li onClick={clickGitHub} className='hover-underline-animation'>GitHub</li>
-                    <li onClick={clickDemo} className='hover-underline-animation'>Demo</li>
-                </ul>
-            </fieldset>
-
+        <div style={containerStyles}>
+            <div>
+        <h3 style={{fontSize:'1.5em'}}>Projects</h3>
+        <div style={{paddingLeft:'1em', paddingTop:'1em'}} className='partial-border'>
+            <div style={{'--width':'70%', display:'block'}} className='project-list-item'>Scheduler</div>
+            <div style={{'--width':'80%', display:'block'}} className='project-list-item'>Audio Loop</div>
+            </div>
         </div>
+        </div>
+       
     )
 }
 

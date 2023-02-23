@@ -8,11 +8,13 @@ const pStyles = {
 }
 
 const h1Styles = {
-    fontSize: '5em',
+    fontSize: '3em',
     marginTop: '0px',
     marginBottom:'0px',
     padding: '0',
-    color: 'white'
+    color: 'white',
+    filter:'brightness(.9)',
+    background:'none'
 }
 
 const altColor = {
@@ -21,17 +23,15 @@ const altColor = {
 
 }
 
-const containerStyles = {
-    marginLeft: '5em'
-}
+
 
 const About = () => {
   return (
-    <div style={containerStyles}>
+    <div className="project-card">
         <p style = {pStyles}>Hello friends! My name is</p>
-        <h1 style = {h1Styles}>Joseph Cooler.</h1>
-        <h1 style= {{...h1Styles, ...altColor}}>Full Stack Web Developer.</h1>
-        <p style={{width:'50ch'}}>I'm a Full Stack coding bootcamp graduate from the University of Wisconsin, Madison. Currently, my
+        <h1 style = {h1Styles}>Joseph Cooler</h1>
+        <h1 style= {{...h1Styles, ...altColor}}>Full Stack Web Developer</h1>
+        <p style={{width:'50ch', borderLeft:'2px solid #00C6BD', paddingLeft:'1em'}}>I'm a Full Stack coding bootcamp graduate from the University of Wisconsin, Madison. Currently, my
             focus has been building fun, challenging applications using the <span style={{color:'#00C6BD'}}>MERN</span> stack. However, I'm always equal parts willing and
             excited to learn whatever technology is needed for the task at hand.
         </p>
