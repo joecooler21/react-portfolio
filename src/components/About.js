@@ -25,9 +25,9 @@ const altColor = {
 
 
 
-const About = () => {
+const About = ({showAbout}) => {
   return (
-    <div className="project-card">
+    <div style={{display:showAbout}} className="project-card">
         <p style = {pStyles}>Hello friends! My name is</p>
         <h1 style = {h1Styles}>Joseph Cooler</h1>
         <h1 style= {{...h1Styles, ...altColor}}>Full Stack Web Developer</h1>

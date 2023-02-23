@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import { FaBalanceScale } from 'react-icons/fa'
 
 const Contact = ({ showContact, setShowContact }) => {
 
@@ -15,8 +16,8 @@ const Contact = ({ showContact, setShowContact }) => {
         position: 'absolute',
         top: '25%',
         transform: submit ? 'rotateY(180deg)' : null,
-        transition: 'transform .5s'
-    }
+        transition:'all .5s',
+        }
 
     const fsStyles = {
         margin: '0px',
@@ -102,8 +103,8 @@ const Contact = ({ showContact, setShowContact }) => {
                     </div>
 
                     <div style={{ textAlign: 'center' }}>
-                        <button onClick={clickSubmit} style={{ marginTop: '25px', width: '7em', borderRadius: '5px', border: '1px solid #00C6BD' }}>Submit</button>
-                        <button onClick={closeContact} style={{ marginTop: '25px', width: '7em', borderRadius: '5px', border: '1px solid #00C6BD' }}>Close</button>
+                        <button style={{marginRight:'.5em'}} className='contact-button' onClick={clickSubmit}>Submit</button>
+                        <button className='contact-button' onClick={closeContact}>Close</button>
                     </div>
 
                 </div>}

@@ -1,10 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sarpanch:900');
+
+
 
 * {
   background-color: #0B1323;
   color: silver;
   caret-color: transparent;
+}
+
+.logo {
+  font-size:2.5em;
+  color:#00C6BD;
+  outline:none;
+  background:none;
+  border:2px solid #00C6BD;
+  border-radius: 50%;
+  width:75px;
+  height:75px;
+  margin-left:2em;
+  transition:all .5s;
+}
+
+.logo:hover {
+  transform:scale(1.1);
+  transition:all .5s;
 }
 
 body, button, input {
@@ -13,6 +34,11 @@ body, button, input {
 
 button:hover {
   cursor: pointer;
+}
+
+.main-container {
+  display:flex;
+  margin-left:5%;
 }
 
 .nav-list li {
@@ -105,7 +131,7 @@ button:hover {
 
  .project-card {
   margin-left:5em;
-  margin-top:10%;
+  margin-top:5%;
   padding-left:1em;
  }
 
@@ -121,5 +147,13 @@ button:hover {
  .left-border {
   border-left:2px solid #00C6BD;
   padding-left:1em;
+ }
+
+ .contact-button {
+  margin-top: 25px;
+  width: 7em;
+  border-radius: 5px;
+  border: 1px solid #00C6BD;
+  height:3em;
  }
 
