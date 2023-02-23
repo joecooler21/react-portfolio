@@ -26,8 +26,14 @@ const altColor = {
 
 
 const About = ({showAbout}) => {
+    const styles = {
+        opacity:showAbout ? 1:0,
+        transform:showAbout ? 'scaleX(1)' : 'scaleX(0)',
+        transformOrigin:'left',
+        transition:'all .3s',
+    }
   return (
-    <div style={{display:showAbout}} className="project-card">
+    <div style={styles} className="project-card">
         <p style = {pStyles}>Hello friends! My name is</p>
         <h1 style = {h1Styles}>Joseph Cooler</h1>
         <h1 style= {{...h1Styles, ...altColor}}>Full Stack Web Developer</h1>

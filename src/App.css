@@ -130,6 +130,7 @@ button:hover {
  }
 
  .project-card {
+  position:absolute;
   margin-left:5em;
   margin-top:5%;
   padding-left:1em;
@@ -155,5 +156,11 @@ button:hover {
   border-radius: 5px;
   border: 1px solid #00C6BD;
   height:3em;
+ }
+
+ .footer {
+  position:absolute;
+  bottom:5%;
+  right:5%;
  }
 

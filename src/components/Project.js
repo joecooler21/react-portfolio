@@ -19,16 +19,16 @@ const containerStyles = {
 const Project = ({setShowScheduler, setShowAbout, setShowAudioLoop}) => {
 
     const showScheduler = () => {
-        setShowScheduler('block')
-        setShowAbout('none')
-        setShowAudioLoop('none')
+        setShowScheduler(true)
+        setShowAbout(false)
+        setShowAudioLoop(false)
         
     }
 
     const showAudioLoop = () => {
-        setShowScheduler('none')
-        setShowAbout('none')
-        setShowAudioLoop('block')
+        setShowScheduler(false)
+        setShowAbout(false)
+        setShowAudioLoop(true)
 
     }
 

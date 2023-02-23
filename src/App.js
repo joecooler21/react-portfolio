@@ -12,14 +12,14 @@ import { useState } from 'react'
 const App = () => {
 
     const [showContact, setShowContact] = useState(false)
-    const [showScheduler, setShowScheduler] = useState('none')
-    const [showAudioLoop, setShowAudioLoop] = useState('none')
-    const [showAbout, setShowAbout] = useState('block')
+    const [showScheduler, setShowScheduler] = useState(false)
+    const [showAudioLoop, setShowAudioLoop] = useState(false)
+    const [showAbout, setShowAbout] = useState(true)
 
     const logoClick = () => {
-      setShowScheduler('none')
-      setShowAudioLoop('none')
-      setShowAbout('block')
+      setShowScheduler(false)
+      setShowAudioLoop(false)
+      setShowAbout(true)
     }
 
 
@@ -37,6 +37,7 @@ const App = () => {
         <Contact showContact={showContact} setShowContact={setShowContact} />
       
     </div>
+    <footer className='footer'>&copy; Joseph Cooler</footer>
     </div>
   )
 }
