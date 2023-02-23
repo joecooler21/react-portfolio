@@ -1,3 +1,4 @@
+import { calculateNewValue } from '@testing-library/user-event/dist/utils'
 import { React, useState } from 'react'
 import { FaBalanceScale } from 'react-icons/fa'
 
@@ -9,12 +10,15 @@ const Contact = ({ showContact, setShowContact }) => {
     const [submit, setSubmit] = useState(false)
 
     const styles = {
-        width: '25%',
-        height: '60%',
+        opacity:showContact ? 1:0,
+        padding:'1em',
+        width: '350px',
+        height: '450px',
         border: '1px solid #00C6BD',
         borderRadius: '5px',
         position: 'absolute',
-        top: '25%',
+        margin:'0 auto',
+        left:'calc(50% - 25% / 2)',
         transform: submit ? 'rotateY(180deg)' : null,
         transition:'all .5s',
         }
@@ -56,7 +60,11 @@ const Contact = ({ showContact, setShowContact }) => {
             return
         }
         const contactMsg = { name: name.trim(), email: email.trim(), message: message.trim() }
+
         setSubmit(true)
+        setName('')
+        setEmail('')
+        setMessage('')
 
 
         const options = {
@@ -76,10 +84,11 @@ const Contact = ({ showContact, setShowContact }) => {
 
 
     return (
-        <dialog open={showContact} style={styles}>
+        <div style={styles}>
 
             {submit ?
-                <div style={{ transform: 'rotateY(180deg)', marginTop: '50%', textAlign: 'center' }}><h1>Message Sent</h1><p>Thank you for your message! You should expect a reply within 24 hours.</p><button onClick={closeContact} style={{ marginTop: '25px', width: '7em', borderRadius: '5px', border: '1px solid #00C6BD' }}>Close</button></div>
+                <div style={{ transform: 'rotateY(180deg)', marginTop: '50%', textAlign: 'center' }}><h1>Message Sent</h1><p>Thank you for your message! You should expect a reply within 24 hours.</p>
+                <button className='contact-button' onClick={closeContact}>Close</button></div>
                 : <div style={fsStyles}>
 
                     <div style={legendStyles}>Contact Me</div>
@@ -109,7 +118,7 @@ const Contact = ({ showContact, setShowContact }) => {
 
                 </div>}
 
-        </dialog>
+        </div>
     )
 }
 
