@@ -49,8 +49,7 @@ const NavBar = ({ setShowContactMe, setShowAbout, setShowAudioLoop, setShowSched
     <li style={{'--width':'75%'}} className='hover-underline-animation projects-top-menu' onClick={clickProjects}>Projects <FaPen /></li>
         <li style={{'--width':'70%'}} onClick = {clickContactMe} className='hover-underline-animation'>Contact <FaEnvelope /></li>
         <li style={{'--width':'70%'}} onClick = {clickGitHub} className='hover-underline-animation'>Github <FaGithub /></li>
-        <li style={{'--width':'70%'}} className='hover-underline-animation' ><a style={{textDecoration:'none'}}
-         href='https://github.com/joecooler21/react-portfolio/blob/main/public/jcDev.pdf' download>Resume</a> <FaDownload /></li>
+        <li onClick={() => {window.open('https://github.com/joecooler21/react-portfolio/blob/main/public/jcDev.pdf')}} style={{'--width':'70%'}} className='hover-underline-animation' >Resume <FaDownload /></li>
     </ul>
     </>
   )
