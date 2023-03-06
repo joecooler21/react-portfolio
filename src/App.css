@@ -31,14 +31,12 @@
   display: none !important;
 }
 
-@media(max-height:525px) {
-  .footer {
-    display:none;
-  }
-}
-
 @media(max-width:968px) {
   .logo {
+    display: none;
+  }
+
+  .footer {
     display: none;
   }
 
