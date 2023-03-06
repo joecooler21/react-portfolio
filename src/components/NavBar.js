@@ -1,4 +1,5 @@
-import { FaEnvelope, FaGithub, FaDownload } from "react-icons/fa"
+import { FaEnvelope, FaGithub, FaDownload, FaPen } from "react-icons/fa"
+import { useState } from 'react'
 
 const ulStyles = {
     display: 'flex',
@@ -6,7 +7,9 @@ const ulStyles = {
     justifyContent: 'right',
 }
 
-const NavBar = ({ setShowContact }) => {
+const NavBar = ({ setShowContactMe, setShowAbout, setShowAudioLoop, setShowScheduler, setShowProjects }) => {
+
+  
 
 
 
@@ -14,20 +17,44 @@ const NavBar = ({ setShowContact }) => {
     window.open('https://github.com/joecooler21')
   }
 
-  const clickContact = () => {
-    setShowContact(true)
+  const clickProjects = () => {
+    setShowContactMe(false)
+    setShowAbout(false)
+    setShowAudioLoop(false)
+    setShowScheduler(false)
+    setShowProjects(true)
+  }
+
+  const clickContactMe = () => {
+    setShowContactMe(true)
+    setShowAbout(false)
+    setShowAudioLoop(false)
+    setShowScheduler(false)
+    setShowProjects(false)
+  }
+
+  const clickLogo = () => {
+    setShowAbout(true)
+    setShowContactMe(false)
+    setShowScheduler(false)
+    setShowAudioLoop(false)
+    setShowProjects(false)
   }
 
   return (
     <>
 
     <ul className='nav-list' style={ulStyles}>
-        <li style={{'--width':'70%'}} onClick = {clickContact} className='hover-underline-animation'>Contact <FaEnvelope /></li>
+      <li onClick={clickLogo} className='nav-logo'>&lt;JC /&gt;</li>
+    <li style={{'--width':'75%'}} className='hover-underline-animation projects-top-menu' onClick={clickProjects}>Projects <FaPen /></li>
+        <li style={{'--width':'70%'}} onClick = {clickContactMe} className='hover-underline-animation'>Contact <FaEnvelope /></li>
         <li style={{'--width':'70%'}} onClick = {clickGitHub} className='hover-underline-animation'>Github <FaGithub /></li>
-        <li style={{'--width':'70%'}} className='hover-underline-animation' >Resume <FaDownload /></li>
+        <li style={{'--width':'70%'}} className='hover-underline-animation' ><a href="../resume/jcdev.pdf" download>Resume</a> <FaDownload /></li>
     </ul>
     </>
   )
 }
+
+// <li style={{'--width':'75%'}} className='hover-underline-animation projects-menu'>&lt;JC /&gt; <FaEnvelope /></li>
 
 export default NavBar

@@ -28,6 +28,7 @@ const altColor = {
 const About = ({showAbout}) => {
     const styles = {
         opacity:showAbout ? 1:0,
+        zIndex: showAbout ? 2:0,
         transform:showAbout ? 'scaleX(1)' : 'scaleX(0)',
         transformOrigin:'left',
         transition:'all .3s',
@@ -35,12 +36,10 @@ const About = ({showAbout}) => {
   return (
     <div style={styles} className="project-card">
         <p style = {pStyles}>Hello friends! My name is</p>
-        <h1 style = {h1Styles}>Joseph Cooler</h1>
-        <h1 style= {{...h1Styles, ...altColor}}>Full Stack Web Developer</h1>
-        <p style={{width:'50ch', borderLeft:'2px solid #00C6BD', paddingLeft:'1em'}}>I'm a Full Stack coding bootcamp graduate from the University of Wisconsin, Madison. Currently, my
-            focus has been building fun, challenging applications using the <span style={{color:'#00C6BD'}}>MERN</span> stack. However, I'm always equal parts willing and
-            excited to learn whatever technology is needed for the task at hand.
-        </p>
+        <h1 className='header' style = {h1Styles}>Joseph Cooler</h1>
+        <h1 className='header' style= {{...h1Styles, ...altColor}}>Full Stack</h1>
+        <h1 className='header' style= {{...h1Styles, ...altColor}}>Web Developer</h1>
+        <p className="border-left project-summary">Full stack web developer located in Wisconsin, USA. UW Madison coding bootcamp graduate. Passion for problem-solving, building and making things work.</p>
       
     </div>
   )

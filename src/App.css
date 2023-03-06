@@ -10,25 +10,146 @@
   caret-color: transparent;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 355px;
+  margin-top: 10px;
+}
+
+.nav-logo {
+  color: #00C6BD;
+  font-weight: bold;
+  display: none;
+}
+
+.projects-menu {
+  display: none !important;
+}
+
+.projects-top-menu {
+  display: none !important;
+}
+
+@media(max-height:525px) {
+  .footer {
+    display:none;
+  }
+}
+
+@media(max-width:968px) {
+  .logo {
+    display: none;
+  }
+
+  .projects-top-menu {
+    display: inline-block !important;
+  }
+
+  .nav-logo {
+    display: inline-block !important;
+  }
+
+  .projects-menu {
+    display: block !important;
+  }
+
+  .project-container {
+    display: none !important;
+  }
+
+  .project-card {
+    margin-right: 15%;
+  }
+
+  .contact-card {
+    transform: scale(85%) !important;
+  }
+
+  .header {
+    font-size: 2em !important;
+  }
+
+  .nav-list {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0% !important;
+    white-space: nowrap !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+  }
+
+  .footer {
+    bottom: 5% !important;
+  }
+
+
+}
+
+.main-container {
+  background: none;
+  display: flex;
+  margin-top: 5%;
+}
+
+.contact-card {
+  box-sizing: border-box;
+  background: none;
+  transform-origin: left;
+  transition: all .3s;
+  width: 50%;
+}
+
+.contact-container {
+  border: 1px solid #00C6BD;
+  border-radius: 7px;
+  width: 400px;
+  margin-left:25%;
+  padding:1em;
+  padding-top:0em;
+}
+
+.edit-styles {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #00C6BD;
+  caret-color: white;
+  width: 395px;
+}
+
+
+.project-container {
+
+  display: flex;
+  background: transparent;
+  flex-direction: column;
+  z-index: 2;
+  margin-left:15%;
+}
+
+
+
 .logo {
-  font-size:2.5em;
-  color:#00C6BD;
-  outline:none;
-  background:none;
-  border:2px solid #00C6BD;
-  border-radius: 50%;
-  width:75px;
-  height:75px;
-  margin-left:2em;
-  transition:all .5s;
+  font-size: 2em;
+  font-weight: bold;
+  border: none;
+  color: #00C6BD;
+  outline: none;
+  background: none;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 2em;
+  transition: all .5s;
 }
 
 .logo:hover {
-  transform:scale(1.1);
-  transition:all .5s;
+  transform: scale(1.1);
+  transition: all .5s;
 }
 
-body, button, input {
+body,
+button,
+input {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -36,10 +157,7 @@ button:hover {
   cursor: pointer;
 }
 
-.main-container {
-  display:flex;
-  margin-left:5%;
-}
+
 
 .nav-list li {
   font-size: .9em;
@@ -88,11 +206,11 @@ button:hover {
 
 .partial-border {
   position: relative;
-  top:-5%;
+  top: -5%;
   background: none;
   border: none;
   text-align: left;
-  
+
 }
 
 .partial-border::before,
@@ -101,8 +219,8 @@ button:hover {
   width: 2em;
   height: 2em;
   content: "";
-  border-top-left-radius:7px;
-  
+  border-top-left-radius: 7px;
+
 }
 
 .partial-border::before {
@@ -110,57 +228,64 @@ button:hover {
   top: 0;
   border-left: 3px solid #00C6BD;
   border-top: 3px solid #00C6BD;
-  
- }
 
- 
+}
 
- .project-list-item {
-  margin-bottom:1em;
+
+
+.project-list-item {
+  margin-bottom: 1em;
   padding: .1em;
   text-align: left;
   transition: .2s all;
- }
+  background: none;
+}
 
- .project-list-item:hover {
-  letter-spacing:.02rem;
-  color:#00C6BD;
+.project-list-item:hover {
+  letter-spacing: .02rem;
+  color: #00C6BD;
   cursor: pointer;
   transition: all .2s;
- }
+}
 
- .project-card {
+.project-card {
+  background: none;
   position:absolute;
-  margin-left:5em;
-  margin-top:5%;
-  padding-left:1em;
- }
+  margin-left: 15%;
+  padding-left: 1em;
+}
 
- .project-button {
-  outline:none;
-  border:none;
-  font-size:1em;
-  margin-right:.5em;
-  margin-top:2em;
-  margin-left:2em;
- }
+.project-button {
+  outline: none;
+  border: 1px solid #00C6BD;
+  border-radius: 7px;
+  font-size: 1em;
+  padding: .5em;
+}
 
- .left-border {
-  border-left:2px solid #00C6BD;
-  padding-left:1em;
- }
+.left-border {
+  border-left: 2px solid #00C6BD;
+  padding-left: 1em;
+}
 
- .contact-button {
+.contact-button {
   margin-top: 25px;
   width: 7em;
   border-radius: 5px;
   border: 1px solid #00C6BD;
-  height:3em;
- }
+  height: 3em;
+}
 
- .footer {
-  position:absolute;
-  bottom:5%;
-  right:5%;
- }
+.footer {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: .8em;
+}
 
+.project-summary {
+  max-width: 400px;
+  width: fit-content;
+  line-height: 1.6;
+  background: none;
+}

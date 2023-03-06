@@ -11,6 +11,7 @@ const Contact = ({ showContact, setShowContact }) => {
 
     const styles = {
         opacity:showContact ? 1:0,
+        zIndex: showContact ? 2:0,
         padding:'1em',
         width: '350px',
         height: '450px',

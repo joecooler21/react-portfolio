@@ -2,26 +2,15 @@
 import '../App.css'
 import { useState } from 'react'
 
-const containerStyles = {
-    position:'absolute',
-    right:'20%',
-    display:'flex',
-    flexDirection:'column',
-    marginTop:'5%',
-    marginLeft:'2em',
-    width: '10%',
-}
 
-
-
-
-
-const Project = ({setShowScheduler, setShowAbout, setShowAudioLoop}) => {
+const Project = ({setShowScheduler, setShowAbout, setShowAudioLoop, setShowContactMe, setShowProjects}) => {
 
     const showScheduler = () => {
         setShowScheduler(true)
         setShowAbout(false)
         setShowAudioLoop(false)
+        setShowContactMe(false)
+        setShowProjects(false)
         
     }
 
@@ -29,16 +18,18 @@ const Project = ({setShowScheduler, setShowAbout, setShowAudioLoop}) => {
         setShowScheduler(false)
         setShowAbout(false)
         setShowAudioLoop(true)
+        setShowContactMe(false)
+        setShowProjects(false)
 
     }
 
 
     
     return (
-        <div style={containerStyles}>
+        <div className='project-container'>
             <div>
         <h3 style={{fontSize:'1.5em'}}>Projects</h3>
-        <div style={{paddingLeft:'1em', paddingTop:'1em'}} className='partial-border'>
+        <div style={{paddingLeft:'1em', paddingTop:'1em'}} className='partial-border list-container'>
             <div onClick={showScheduler} style={{'--width':'70%', display:'block'}} className='project-list-item'>Scheduler</div>
             <div onClick={showAudioLoop} style={{'--width':'80%', display:'block'}} className='project-list-item'>Audio Loop</div>
             </div>

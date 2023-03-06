@@ -5,6 +5,8 @@ import Project from './components/Project'
 import Contact from './components/Contact'
 import Scheduler from './components/Scheduler'
 import AudioLoop from './components/AudioLoop'
+import ContactMe from './components/ContactMe'
+import Projects from './components/Projects'
 import '../src/App.css'
 
 import { useState } from 'react'
@@ -15,26 +17,31 @@ const App = () => {
     const [showScheduler, setShowScheduler] = useState(false)
     const [showAudioLoop, setShowAudioLoop] = useState(false)
     const [showAbout, setShowAbout] = useState(true)
+    const [showContactMe, setShowContactMe] = useState(false)
+    const [showProjects, setShowProjects] = useState(false)
 
     const logoClick = () => {
       setShowScheduler(false)
       setShowAudioLoop(false)
       setShowAbout(true)
+      setShowContactMe(false)
     }
 
 
   return (
     <div>
 
-        <NavBar setShowContact={setShowContact} />
-        <button onClick={logoClick} className="logo">JC</button>
+        <NavBar setShowProjects={setShowProjects} setShowContactMe={setShowContactMe} setShowAbout={setShowAbout} setShowAudioLoop={setShowAudioLoop} setShowScheduler={setShowScheduler} />
+        <button onClick={logoClick} className="logo">&lt;JC /&gt;</button>
         
         <div className='main-container'>
           <About showAbout={showAbout} />
           <Scheduler showScheduler={showScheduler}/>
           <AudioLoop showAudioLoop={showAudioLoop}/>
-        <Project setShowScheduler={setShowScheduler} setShowAbout={setShowAbout} setShowAudioLoop={setShowAudioLoop} />
-        <Contact showContact={showContact} setShowContact={setShowContact} />
+          <ContactMe showContactMe={showContactMe} setShowAbout={setShowAbout} setShowContactMe={setShowContactMe} />
+          <Projects showProjects={showProjects} />
+        <Project setShowProjects={setShowProjects} setShowContactMe={setShowContactMe} setShowScheduler={setShowScheduler} setShowAbout={setShowAbout} setShowAudioLoop={setShowAudioLoop} />
+        
       
     </div>
     <footer className='footer'>&copy; Joseph Cooler</footer>
