@@ -1,7 +1,5 @@
 import { React, useState } from 'react'
 
-
-
 const ContactMe = ({ showContactMe, setShowAbout, setShowContactMe }) => {
 
     const [name, setName] = useState('')
@@ -11,15 +9,15 @@ const ContactMe = ({ showContactMe, setShowAbout, setShowContactMe }) => {
 
     const styles = {
         opacity: showContactMe ? '1' : '0',
-        zIndex:showContactMe ? 2 : 0,
+        zIndex: showContactMe ? 2 : 0,
         transform: showContactMe ? 'scaleX(1)' : 'scaleX(0)',
-        
+
     }
 
     const closeContact = () => {
-    setShowContactMe(false)
-    setShowAbout(true)
-       setSubmit(false)
+        setShowContactMe(false)
+        setShowAbout(true)
+        setSubmit(false)
     }
 
     const editName = (e) => {
@@ -62,9 +60,7 @@ const ContactMe = ({ showContactMe, setShowAbout, setShowContactMe }) => {
     }
 
     return (
-
         <div className='contact-card' style={styles}>
-            
             {!submit ? <div className='contact-container'>
             <h1>Contact</h1>
             <div>
@@ -72,20 +68,17 @@ const ContactMe = ({ showContactMe, setShowAbout, setShowContactMe }) => {
                 <div style={{ margin: '5px' }}></div>
                 <input onChange={editName} className='edit-styles'></input>
             </div>
-
             <div style={{ marginTop: '15px' }}>
                 <label>E-mail <span style={{ color: 'red' }}>*</span></label>
                 <div style={{ margin: '5px' }}></div>
                 <input onChange={editEmail} type='email' className='edit-styles'></input>
             </div>
-
             <div style={{ marginTop: '15px'}}>
                 <label>Message <span style={{ color: 'red' }}>*</span></label>
                 <div style={{ margin: '5px' }}></div>
                 <textarea onChange={editMessage} className='edit-styles' style={{resize:'none', height:'125px', border:'1px solid #00C6BD', borderRadius:'7px'}}></textarea>
             </div>
             <div className='button-container'>
-            
             <button className='project-list-item project-button' onClick={clickSubmit} >Submit</button>
             <button className='project-list-item project-button' onClick={closeContact} >Cancel</button>
             </div>
@@ -94,12 +87,8 @@ const ContactMe = ({ showContactMe, setShowAbout, setShowContactMe }) => {
                 <p>Your message has been sent!. You should expect a response within 24hrs.</p>
                 <button style={{marginLeft:'35%'}} onClick={closeContact} className='project-list-item project-button'>Close</button>
                 </div>}
-            
-
-
         </div>
     )
-
 }
 
 export default ContactMe
