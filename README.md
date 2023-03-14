@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+Hi, I'm Zach :wave:
+===================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Software engineer, digital media designer, and aspiring software entrepreneur.
 
-## Available Scripts
+Life
+----
 
-In the project directory, you can run:
+<img align="right" src="img/scene.png">
 
-### `npm start`
+:shipit: [**University of Rochester**][ur] Dean's Scholar, Computer Science '25  
+:shipit: [**42tm**][42tm] founder & software engineer  
+:shipit: [**UR CSUG**][csug] tutoring chair  
+:shipit: [**DandyHacks**][dandyhacks] 2021 First Place winner, 2022 organizer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[ur]: https://rochester.edu
+[42tm]: https://github.com/42tm
+[csug]: https://ur-csug.org
+[dandyhacks]: https://dandyhacks.net
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Skills
+------
 
-### `npm test`
+:coffee:         **Java**, Java Swing  
+:gear:           **C/C++**, **Rust**  
+:snake:          **Python**, PyGTK  
+:sunglasses:     **JavaScript**, React, three.js, p5.js  
+:paintbrush:     [Inkscape][inkscape] (2D), [Spline][spline] (3D)  
+:pick:           NeoVim, Linux, Bash, command line, `tmux`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[inkscape]: https://inkscape.org
+[spline]: https://spline.design
 
-### `npm run build`
+###### Learning: C++, ray tracing, 3D graphics, full-stack web development
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Sponsors
+--------
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Many thanks to [Brett Zamir][brettz9] and JT for sponsoring my work.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[brettz9]: http://brett-zamir.me
 
-### `npm run eject`
+- - -
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!--<a href="https://novakcgx.me">
+    <img height="32" align="left" alt="Website" src="img/icons/personal.png" />
+</a>-->
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a href="mailto:cszach@proton.me">
+    <img height="32" align="left" alt="Mail" src="img/icons/protonmail.png" />
+</a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<a href="https://www.linkedin.com/in/zach-nguyen">
+    <img height="32" align="left" alt="LinkedIn" src="img/icons/linkedin.png" />
+</a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<a href="https://paypal.me/dnguy38">
+    <img height="32" align="left" alt="Buy Me a Coffee" src="img/icons/paypal.png" />
+</a>
 
-## Learn More
+<a href="https://www.buymeacoffee.com/cszach">
+    <img height="32" align="left" alt="Buy Me a Coffee" src="img/icons/buymeacoffee.png" />
+</a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://liberapay.com/cszach">
+    <img height="32" align="left" alt="Liberapay" src="img/icons/liberapay.png" />
+</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a href="https://www.instagram.com/thechonkypenguin">
+    <img height="32" align="left" alt="Instagram" src="img/icons/instagram.png" />
+</a>
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://dribbble.com/cszach">
+    <img height="32" align="left" alt="Dribbble" src="img/icons/dribbble.png" />
+</a>
